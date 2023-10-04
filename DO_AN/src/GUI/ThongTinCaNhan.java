@@ -114,4 +114,6 @@ public class ThongTinCaNhan {
 		panel_2.setBounds(10, 10, 958, 80);
 		frame.getContentPane().add(panel_2);
 	}
+
+	
 }
