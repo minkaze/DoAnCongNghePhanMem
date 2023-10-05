@@ -25,12 +25,19 @@ public class MenuSV extends JPanel {
 		JButton btnNewButton = new JButton("Làm bài");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				MenuSV a = new MenuSV();
-				GiaoDienSinhVien.frame.remove(a);
-				GiaoDienLamBaiSV b = new GiaoDienLamBaiSV();
-				b.setBounds(0, 0, 978, 608);
-				GiaoDienSinhVien.frame.add(b);
+//				MenuSV a = new MenuSV();
+//				GiaoDienSinhVien.frame.remove(a);
+//				GiaoDienLamBaiSV b = new GiaoDienLamBaiSV();
+//				b.setBounds(0, 0, 978, 608);
+//				GiaoDienSinhVien.frame.getContentPane().add(b);
 				
+				GiaoDienLamBaiSV b = new GiaoDienLamBaiSV();
+			    b.setBounds(0, 0, 978, 608);			    
+			    GiaoDienSinhVien.frame.getContentPane().add(b);
+			    GiaoDienSinhVien.frame.revalidate();
+			    GiaoDienSinhVien.frame.repaint();
+			    GiaoDienSinhVien.frame.getContentPane().remove(MenuSV.this);
+
 				
 			}
 		});

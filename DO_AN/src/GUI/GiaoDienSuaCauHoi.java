@@ -4,22 +4,21 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import java.awt.Font;
 
-public class GiaoDienKetQua extends JPanel {
+public class GiaoDienSuaCauHoi extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * Create the panel.
 	 */
-	public GiaoDienKetQua() {
+	public GiaoDienSuaCauHoi() {
 		setLayout(null);
 		
-		JButton btnNewButton = new JButton("Xem kết quả");
+		JButton btnNewButton = new JButton("Lưu");
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnNewButton.setBounds(738, 497, 111, 34);
+		btnNewButton.setBounds(778, 518, 85, 33);
 		add(btnNewButton);
 
 	}
 
-	
 }

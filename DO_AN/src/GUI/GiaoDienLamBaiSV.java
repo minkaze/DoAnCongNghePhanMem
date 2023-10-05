@@ -55,7 +55,12 @@ public class GiaoDienLamBaiSV extends JPanel {
 		JButton btnNewButton = new JButton("Bắt đầu làm");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				GiaoDienTracNghiem a = new GiaoDienTracNghiem();
+				a.setBounds(0, 0, 936, 512);
+				GiaoDienSinhVien.frame.getContentPane().add(a);
+				GiaoDienSinhVien.frame.revalidate();
+				GiaoDienSinhVien.frame.repaint();
+				GiaoDienSinhVien.frame.getContentPane().remove(GiaoDienLamBaiSV.this);
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 16));
@@ -86,17 +91,6 @@ public class GiaoDienLamBaiSV extends JPanel {
 		textField_4.setColumns(10);
 		textField_4.setBounds(681, 366, 96, 19);
 		add(textField_4);
-		
-		JPanel panel_2_1 = new JPanel();
-		panel_2_1.setLayout(null);
-		panel_2_1.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_2_1.setBounds(0, 0, 987, 80);
-		add(panel_2_1);
-		
-		JLabel lblNewLabel = new JLabel("Làm bài");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel.setBounds(466, 29, 83, 13);
-		panel_2_1.add(lblNewLabel);
 		
 		
 

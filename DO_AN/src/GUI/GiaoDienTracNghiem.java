@@ -14,11 +14,11 @@ public class GiaoDienTracNghiem extends JPanel {
 		setLayout(null);
 		
 		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setBounds(685, 544, 85, 26);
+		btnNewButton.setBounds(580, 434, 85, 26);
 		add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("New button");
-		btnNewButton_1.setBounds(856, 544, 85, 26);
+		btnNewButton_1.setBounds(774, 434, 85, 26);
 		add(btnNewButton_1);
 
 	}

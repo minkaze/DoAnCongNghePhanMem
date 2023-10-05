@@ -17,8 +17,6 @@ public class GiaoDienSinhVien {
 	public static JFrame frame;
 	
 	
-	 
-
 	/**
 	 * Launch the application.
 	 */
@@ -34,7 +32,6 @@ public class GiaoDienSinhVien {
 			}
 		});
 	}
-
 	/**
 	 * Create the application.
 	 */
