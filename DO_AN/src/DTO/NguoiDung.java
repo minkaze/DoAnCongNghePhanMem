@@ -7,7 +7,7 @@ public class NguoiDung {
 	private String maUser;
 	private String hoTen;
 	private String email;;
-	private Sting quyen;
+	private String quyen;
 	private Date ngayTao;
 	private String matKhau;
 	private String userName;
@@ -29,10 +29,11 @@ public class NguoiDung {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Sting getQuyen() {
+	
+	public String getQuyen() {
 		return quyen;
 	}
-	public void setQuyen(Sting quyen) {
+	public void setQuyen(String quyen) {
 		this.quyen = quyen;
 	}
 	public Date getNgayTao() {
