@@ -11,6 +11,8 @@ public class NguoiDung {
 	private Date ngayTao;
 	private String matKhau;
 	private String userName;
+	private String maGV;
+	private String maHS;
 	public String getMaUser() {
 		return maUser;
 	}
@@ -53,6 +55,18 @@ public class NguoiDung {
 	}
 	public void setUserName(String userName) {
 		this.userName = userName;
+	}
+	public String getMaGV(){
+		return maGV;
+	}
+	public void setMaGV(String maGV){
+		this.maGV = maGV;
+	}
+	public String getMaHS(){
+		return maHS;
+	}
+	public void setMaHS(String maHS){
+		this.maHS = maHS;
 	}
 	
 	
