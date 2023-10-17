@@ -17,6 +17,7 @@ public class SharedData {
 	public static Font TEXT_FONT_BOLD = new Font("Tahoma", Font.BOLD, 16);
 	public static Font TITLE_FONT = new Font("Tahoma", Font.PLAIN, 24);
     public static AbstractBorder BORDER_RADIUS = new TextBubbleBorder(Color.BLACK, 1, 8, 0);
+    public static AbstractBorder BORDER_CIRCLE = new TextBubbleBorder(Color.BLACK, 1, 40, 0);
     public static Color OPACITY = new Color(0,0,0,0);
     public static Color GREY = new Color(217,217,217);
     public static MyComboBoxUI TRANSPARENT_CBB_UI = new MyComboBoxUI();
