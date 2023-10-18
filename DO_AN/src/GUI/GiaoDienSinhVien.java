@@ -2,7 +2,6 @@ package GUI;
 
 import java.awt.EventQueue;
 import java.awt.Menu;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
@@ -11,6 +10,8 @@ import java.awt.Color;
 import java.awt.Component;
 
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class GiaoDienSinhVien {
 
@@ -44,29 +45,23 @@ public class GiaoDienSinhVien {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 978, 608);
+		frame.setBounds(100, 100, 1000, 634);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel.setBounds(10, 0, 944, 91);
-		frame.getContentPane().add(panel);
 		panel.setLayout(null);
+		panel.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel.setBounds(0, 0, 978, 50);
+		frame.getContentPane().add(panel);
 		
 		JButton btnNewButton = new JButton("Avatar");
-		btnNewButton.setBounds(809, 34, 85, 35);
+		btnNewButton.setBounds(802, 10, 85, 35);
 		panel.add(btnNewButton);
 		
-		MenuSV a = new MenuSV();
-		a.setBounds(0, 0, 978, 608);
-		frame.getContentPane().add(a);
-
-		
-		
-//		GiaoDienLamBaiSV b = new GiaoDienLamBaiSV();
-//		b.setBounds(0, 0, 978, 608);
-//		frame.getContentPane().add(b);
+		GiaoDienNhomGV2 b = new GiaoDienNhomGV2();
+		b.setBounds(0, 0, 978, 600);
+		frame.getContentPane().add(b);
 		
 	}
 	

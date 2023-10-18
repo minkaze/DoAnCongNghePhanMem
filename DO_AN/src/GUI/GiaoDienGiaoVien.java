@@ -4,14 +4,14 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import java.awt.Font;
 
-public class GiaoDienGIaoVien extends JPanel {
+public class GiaoDienGiaoVien extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * Create the panel.
 	 */
-	public GiaoDienGIaoVien() {
+	public GiaoDienGiaoVien() {
 		setLayout(null);
 		
 		JButton btnNewButton = new JButton("Tạo câu hỏi");
