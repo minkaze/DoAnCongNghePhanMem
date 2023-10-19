@@ -24,13 +24,13 @@ public class TextBubbleBorder extends AbstractBorder {
     private BasicStroke stroke = null;
     private int strokePad;
     private int pointerPad = 4;
-    private boolean left = true;
     private RenderingHints hints;
 
     public TextBubbleBorder(
             Color color) {
         this(color, 4, 8, 7);
     }
+    
     public TextBubbleBorder(
             Color color, int thickness, int radii, int pointerSize) {
         this.thickness = thickness;
@@ -47,13 +47,7 @@ public class TextBubbleBorder extends AbstractBorder {
 
         int pad = radii + strokePad;
         int bottomPad = pad + pointerSize + strokePad;
-        insets = new Insets(pad, pad, bottomPad, pad);
-    }
-
-    public TextBubbleBorder(
-            Color color, int thickness, int radii, int pointerSize, boolean left) {
-        this(color, thickness, radii, pointerSize);
-        this.left = left;
+        insets = new Insets (pad, bottomPad, pad, bottomPad);
     }
 
     @Override
@@ -82,39 +76,17 @@ public class TextBubbleBorder extends AbstractBorder {
                 0 + strokePad,
                 width - thickness,
                 bottomLineY,
-                radii,
-                radii);
+                radii*2,
+                radii*2);
 
         Polygon pointer = new Polygon();
-
-        if (left) {
-            // left point
-            pointer.addPoint(
-                    strokePad + radii + pointerPad,
-                    bottomLineY);
+        // left point
+        pointer.addPoint(width - (strokePad + radii + pointerPad),bottomLineY);
             // right point
-            pointer.addPoint(
-                    strokePad + radii + pointerPad + pointerSize,
-                    bottomLineY);
+        pointer.addPoint(width - (strokePad + radii + pointerPad + pointerSize),bottomLineY);
             // bottom point
-            pointer.addPoint(
-                    strokePad + radii + pointerPad + (pointerSize / 2),
-                    height - strokePad);
-        } else {
-            // left point
-            pointer.addPoint(
-                    width - (strokePad + radii + pointerPad),
-                    bottomLineY);
-            // right point
-            pointer.addPoint(
-                    width - (strokePad + radii + pointerPad + pointerSize),
-                    bottomLineY);
-            // bottom point
-            pointer.addPoint(
-                    width - (strokePad + radii + pointerPad + (pointerSize / 2)),
-                    height - strokePad);
-        }
-
+        pointer.addPoint(width - (strokePad + radii + pointerPad + (pointerSize / 2)),height - strokePad);
+        
         Area area = new Area(bubble);
         area.add(new Area(pointer));
 

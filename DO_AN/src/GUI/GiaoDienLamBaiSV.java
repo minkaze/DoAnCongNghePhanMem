@@ -27,6 +27,7 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
 import java.awt.image.ImageObserver;
 import java.awt.image.ImageProducer;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 
 public class GiaoDienLamBaiSV extends JPanel {
@@ -222,10 +223,19 @@ public class GiaoDienLamBaiSV extends JPanel {
         lamBai_BT.setFont(SharedData.TEXT_FONT);
         lamBai_BT.setBorder(SharedData.BORDER_RADIUS);
         add(lamBai_BT, GBConstraints);
-	}
-	public void hien() {
-		GiaoDienLamBaiSV gd = new GiaoDienLamBaiSV();
-//		frame.add
+        
+        lamBai_BT.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {		
+				LamTracNghiemSV b = new LamTracNghiemSV();
+			    b.setBounds(0, 0, 1000, 600);			    
+			    GiaoDienSinhVien.frame.getContentPane().add(b);
+			    GiaoDienSinhVien.frame.revalidate();
+			    GiaoDienSinhVien.frame.repaint();
+			    GiaoDienSinhVien.frame.getContentPane().remove(GiaoDienLamBaiSV.this);
+				
+			}
+		});
+
 	}
 	
 }
