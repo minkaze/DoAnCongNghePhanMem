@@ -17,6 +17,13 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.border.LineBorder;
 
+import DTO.SharedData;
+
+import java.awt.CardLayout;
+import java.awt.GridLayout;
+import javax.swing.JList;
+import javax.swing.SwingConstants;
+
 public class GiaoDienNhomGV2 extends JPanel {
 
 	private static final long serialVersionUID = 1L;
@@ -29,6 +36,10 @@ public class GiaoDienNhomGV2 extends JPanel {
 	private JLabel lblNewLabel_6;
 	private JLabel lblNewLabel_7;
 	private JLabel lblNewLabel_8;
+	private JPanel panel_2;
+	private JPanel panel_3;
+	private JLabel lblNewLabel_9;
+	private JList list;
 
 
 
@@ -108,12 +119,8 @@ public class GiaoDienNhomGV2 extends JPanel {
 		lblNewLabel_7.setAlignmentX(Component.CENTER_ALIGNMENT);
 		panel.add(lblNewLabel_7);
 		
-		JSeparator separator4 = new JSeparator();
-		separator4.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel.add(separator4);
-		
 		lblNewLabel_8 = new JLabel("Xem kết quả học tập");
-		lblNewLabel_8.setForeground(Color.CYAN);
+		lblNewLabel_8.setForeground(new Color(0, 128, 255));
 		lblNewLabel_8.setBorder(new EmptyBorder(20, 0, 10, 0));
 		lblNewLabel_8.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		lblNewLabel_8.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -124,6 +131,24 @@ public class GiaoDienNhomGV2 extends JPanel {
 		JPanel panel_1 = new JPanel();
 		panel_1.setPreferredSize(new Dimension(750, 600));
 		add(panel_1, BorderLayout.EAST);
+		panel_1.setLayout(new BorderLayout(0, 0));
+		
+		panel_2 = new JPanel();
+		panel_2.setPreferredSize(new Dimension(750, 50));
+		panel_1.add(panel_2, BorderLayout.NORTH);
+		panel_2.setLayout(new BorderLayout(0, 0));
+		
+		lblNewLabel_9 = new JLabel("Bài tập về nhà");
+		lblNewLabel_9.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_9.setFont(new Font("Tahoma", Font.BOLD, 20));
+		panel_2.add(lblNewLabel_9, BorderLayout.CENTER);
+		
+		panel_3 = new JPanel();
+		panel_1.add(panel_3, BorderLayout.CENTER);
+		panel_3.setLayout(new BorderLayout(0, 0));
+		
+		list = new JList();
+		panel_3.add(list, BorderLayout.CENTER);
 		
 		
 

@@ -47,6 +47,4 @@ public class Nhom {
 	public void setGV(ArrayList<GiaoVien> gV) {
 		GV = gV;
 	}
-	
-	
 }
